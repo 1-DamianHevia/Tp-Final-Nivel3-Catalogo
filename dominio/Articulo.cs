@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dominio
+{
+    public class Articulo
+    {
+        public int Id { get; set; }
+        //utilizo annotations para poder poner tilde y mas de una palabra en los header del dgv.
+        
+        [DisplayName("Código de Artículo")]
+        public string CodArticulo { get; set; }
+
+        public string Nombre { get; set; }
+
+        [DisplayName("Descripción")]
+        public string Descripcion { get; set; }
+
+        [DisplayName("Imagén Url")]
+        public string UrlImagen { get; set; }
+
+        public decimal Precio { get; set; }
+
+        public Marca Marca { get; set; }
+
+        [DisplayName("Categoría")]
+
+        public Categoria Categoria{ get; set; }
+    }
+}
